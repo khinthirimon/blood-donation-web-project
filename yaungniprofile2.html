@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Register</title>
+        <!-- Bootstrap Font Icon CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+        <!-- Bootstrap CSS Link -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&family=Passions+Conflict&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@300;400;500;600&display=swap');
+        </style>
+    </head>
+      <body id="save-info" style="height: 1000px; background-color:#FDCEDF; padding-top: 70px;
+      ">
+    <!-- Navbar Start -->
+        <nav class="navbar fixed-top navbar-expand-sm navbar-light" 
+        style="background-color: #F9F5F6; color: black;">
+        <div class="container">
+            <a href="#" class="navbar-brand mb-0  h1">
+                <image src="./img/blood.png" width="30" height="30" class="d-inline-block align-top">
+                YaungNi
+            </a>
+    
+        <button 
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            class="navbar-toggler"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active ms-3 me-2">
+                        <a href="home.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item active me-2">
+                        <a href="about.html" class="nav-link ">သွေးလှူနိုင်သူများ</a>
+                    </li>
+                     <!-- dropdown -->
+                     <li class="nav-item dropdown me-2">
+                        <a href="#" class="nav-link dropdown-toggle"
+                        id="navbarDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        >ဗဟုသုတ</a>
+                        <div class="dropdown-menu"
+                        aria-labelledby="navbarDropdown">
+                    <a href="blood.html" class="dropdown-item"><i class="bi bi-droplet-half"></i>သွေး အကြောင်းသိကောင်းစရာ
+                    </a>
+                    <a href="blooddiseases.html" class="dropdown-item"><i class="bi bi-droplet-half"></i>သွေးရောဂါ အမျိုးအစားများ</a>
+                    <a href="bloodanaemia.html" class="dropdown-item"><i class="bi bi-droplet-half"></i> သွေးအားနည်းရောဂါ (Anemia)</a>
+                    <a href="otherblood.html" class="dropdown-item"><i class="bi bi-droplet-half"></i>အခြားသွေးရောဂါနှင့်အစားအသောက်</a>
+                    </div>
+                    <!-- dropdown close -->
+                    <li class="nav-item me-2">
+                        <a href="affirmation.html" class="nav-link ">ခံယူချက်</a>
+                    </li>
+                    <li class="nav-item active me-2">
+                        <a href="suggession.html" class="nav-link ">အကြံပြုချက်</a>
+                    </li>
+                    <li class="nav-item active me-2">
+                        <a href="yaungniprofile2.html" class="nav-link">Profile</a>
+                    </li>
+                </ul>
+            </div>
+            <form class="d-flex">
+                <button type="submit" class="btn btn-light me-3" style="background-color: #FDCEDF;">
+                    <a href="yaungniregister2.html" class="nav-link ">Register</a>
+                </button>
+                <!-- <button type="submit" class="btn btn-light" style="background-color: #FDCEDF;">Sign Up</button> -->
+    
+            </form>
+        </div>
+        </nav>
+    <!-- Navbar Close -->
+    <!-- Profile Start -->
+    <div class="container mt-5">
+        <div class="row" style="display: flex; margin: 0 auto;">
+            <div class="col-md-4">
+                <img src="./img/hand-drawing-cartoon-girl-cute-girl-drawing-for-profile-picture-png.webp" alt="Profile Image" class="img-fluid rounded-circle">
+            </div>
+            <!-- <div id="profileData"> -->
+                <!-- Display saved data here -->
+            <!-- </div> -->
+            <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.min.js"></script> -->
+            <div class="container mt-6 col-sm">
+                <h1>User Information</h1>
+                <p><strong>First Name:</strong> <span id="displayFirstName"></span></p>
+                <p><strong>Email:</strong> <span id="displayLastName"></span></p>
+                <p><strong>Phone Number:</strong> <span id="displayEmail"></span></p>
+                <p><strong>NRC:</strong> <span id="displayNrc"></span></p>
+                <p><strong>BloodType:</strong> <span id="displayBloodType"></span></p>
+                <p><strong>BloodSign:</strong> <span id="displayBloodSign"></span></p>
+                <p><strong>Gender:</strong> <span id="displayGender"></span></p>
+                <p><strong>Birthdate:</strong> <span id="displayBirthdate"></span></p>
+                <p><strong>Address:</strong> <span id="displayAddress"></span></p>
+            </div>
+</div>
+
+    <script>
+        // Retrieve data from the URL query parameters and display it
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById("displayFirstName").textContent = urlParams.get("n1");
+        document.getElementById("displayLastName").textContent = urlParams.get("e1");
+        document.getElementById("displayEmail").textContent = urlParams.get("p1");
+        document.getElementById("displayNrc").textContent = urlParams.get("nrc");
+        document.getElementById("displayBloodType").textContent = urlParams.get("b1");
+        document.getElementById("displayBloodSign").textContent = urlParams.get("bs1");
+        document.getElementById("displayGender").textContent = urlParams.get("g1");
+        document.getElementById("displayBirthdate").textContent = urlParams.get("bd1");
+        document.getElementById("displayAddress").textContent = urlParams.get("add1");
+    </script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/4eb603963b.js" crossorigin="anonymous"></script>
+</html>
+
